@@ -105,7 +105,7 @@ backToTop?.addEventListener('click', () => {
 });
 
 if (supportsIntersectionObserver) {
-  document.querySelectorAll('.project-image img').forEach((image) => {
+  document.querySelectorAll('.project-image:not(.project-image--app) img').forEach((image) => {
     const width = Number(image.getAttribute('width'));
     const height = Number(image.getAttribute('height'));
     if (width > 0 && height > 0) {

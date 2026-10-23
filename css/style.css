@@ -133,7 +133,10 @@ section[id] { scroll-margin-top: 6.5rem; }
 .project-card:nth-child(even) .project-image { order: 2; }
 .project-image { position: relative; width: 100%; height: auto; min-width: 0; padding: 0; overflow: hidden; border: 1px solid var(--border-strong); border-radius: var(--radius-window); background: var(--surface-2); box-shadow: var(--shadow-project); }
 .project-image::before { content: ''; position: relative; z-index: 1; display: block; height: 32px; border-bottom: 1px solid var(--border); background: radial-gradient(circle, var(--text-muted) 44%, transparent 48%) 14px center / 6px 6px no-repeat, radial-gradient(circle, var(--text-muted) 44%, transparent 48%) 26px center / 6px 6px no-repeat, radial-gradient(circle, var(--text-muted) 44%, transparent 48%) 38px center / 6px 6px no-repeat, var(--surface-2); }
+.project-image--app { width: min(100%, 360px); justify-self: center; border-radius: var(--radius-md); }
+.project-image--app::before { display: none; }
 .project-image img { display: block; width: 100%; height: auto; border: 0; border-radius: 0; object-fit: contain; object-position: center; background: var(--surface); transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.project-image--app img { border-radius: var(--radius-md); background: transparent; }
 .js .project-image img { transform: scale(1.04); }
 .js .project-card.visible .project-image img { transform: scale(1); }
 .project-card:hover .project-image img { transform: scale(1.02); }
